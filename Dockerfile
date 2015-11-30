@@ -28,3 +28,9 @@ RUN apt-get update && apt-get install -y -q --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 RUN adduser --quiet jenkins
+
+USER jenkins
+
+ADD slave.jar /home/jenkins/slave.jar
+
+USER root

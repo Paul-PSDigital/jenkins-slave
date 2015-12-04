@@ -24,8 +24,8 @@ RUN apt-get update && apt-get install -y -q --no-install-recommends \
         rsync \
         software-properties-common \
         wget \
-				ruby-full \
-	      python-pip \
+	ruby-full \
+	python-pip \
     && rm -rf /var/lib/apt/lists/*
 
 RUN adduser --quiet jenkins
